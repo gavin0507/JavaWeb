@@ -1,9 +1,27 @@
+-----------------------------------------------maven基本配置开始------------------------------------------------
 1.下载Maven，
-下载地址：Maven：http://maven.apache.org/download.cgi下载完成之后将其解压，将解压后的文件夹重命名成 maven，并将它放在 D:\Server 目录下，即 maven 最终的路径是：D:\Server\maven
+下载地址：Maven：http://maven.apache.org/download.cgi下载完成之后将其解压，将解压后的文件夹重命名成 maven，
+并将它放在 D:\Server 目录下，即 maven 最终的路径是：D:\Server\maven
+
 2.配置Maven环境变量
 配置系统变量：MAVEN_HOME = D:\Server\maven   path = %MAVEN_HOME%\bin
 校验环境变量：打开 cmd，在里面敲：mvn -v
+
 3.Maven简单配置
 3.1配置仓库位置
-maven 的仓库默认是放在本地用户的临时文件夹下面的 .m2 文件夹下的 repository 下，一般在 C:\Users\admcnm\.m2\repository 目录下。由于后期使用后jar会比较多，我们来修改路径指定到 D:\Repositories\Maven 目录下。
-编辑maven\conf \settings.xml，添加配置：<localRepository>D:\Server\maven\repository</localRepository>
+maven 的仓库默认是放在本地用户的临时文件夹下面的 .m2 文件夹下的 repository 下，一般在 C:\Users\admcnm\.m2\repository 目录下。
+由于后期使用后jar会比较多，我们来修改路径指定到 D:\Repositories\Maven 目录下。编辑maven\conf \settings.xml，添加配置：
+<localRepository>D:\Server\maven\repository</localRepository>
+
+4.MyEclipse中的配置
+4.1 配置使用的JDK：打开 myeclipse，Window --> Preferences --> MyEclipse --> Maven4MyEclipse --> Maven
+
+-----------------------------------------------maven基本配置结束------------------------------------------------
+
+
+-----------------------------------------------maven基本问题整理开始------------------------------------------------
+maven问题整理：
+1.新创建的maven项目后，有时候会有这个报错：Project configuration is not up-to-date with pom.xml. Run project configuration update
+  这个问题解决非常简单，在项目右键-【Maven4Myeclipse】-【Update Project Configuration……】这时会打开一个（Update Maven Dependencies）
+  的对话框，然后勾选住出错的项目，点击ok，这样就搞定了。
+-----------------------------------------------maven基本问题整理结束------------------------------------------------
