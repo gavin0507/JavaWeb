@@ -15,7 +15,9 @@ maven 的仓库默认是放在本地用户的临时文件夹下面的 .m2 文件
 
 4.MyEclipse中的配置
 4.1 配置使用的JDK：打开 myeclipse，Window --> Preferences --> MyEclipse --> Maven4MyEclipse --> Maven
-
+4.2 配置使用的Maven  选择自己的maven：-->Installations 选择自己本地搭建的
+4.3 配置使用的setting.xml 选择你自己的setting.xml：文件的地址为:自己本地的maven conf目录下的setting文件
+maven找jar包的顺序是先在本地的仓库去找，如果本地仓库没有jar包的话，在去远程的仓库去找，如果还没有，就去中央库去找。
 -----------------------------------------------maven基本配置结束------------------------------------------------
 
 
